@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Naveen Motor Driving School - Professional driving training in Belgaum, Karnataka. Learn to drive safely with experienced instructors."/>
+  <meta name="keywords" content="driving school belgaum, motor driving school belagavi, learn driving, driving licence belgaum"/>
+  <title>Naveen Motor Driving School | Belgaum, Karnataka</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <img src="logo.png" alt="Naveen Motor Driving School Logo" loading="lazy"/>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <a href="#" onclick="showPage('home');closeMobile()" class="active" id="nav-home">Home</a>
+    <a href="#" onclick="showPage('courses');closeMobile()" id="nav-courses">Courses &amp; Services</a>
+    <a href="#" onclick="showPage('about');closeMobile()" id="nav-about">About Us</a>
+    <a href="#" onclick="showPage('contact');closeMobile()" id="nav-contact">Contact</a>
+    <a href="#" onclick="showModal();closeMobile()" class="btn-enquire">Enquire Now</a>
+  </div>
+  <button class="dark-toggle" id="darkToggle" onclick="toggleDark()" title="Toggle dark mode" aria-label="Toggle dark mode">
+    <span class="dark-toggle-icon moon">🌙</span>
+    <span class="dark-toggle-icon sun">☀️</span>
+  </button>
+  <div class="hamburger" id="hamburger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HOME PAGE -->
+<div class="page active" id="page-home">
+
+  <!-- HERO SLIDER -->
+  <div class="hero">
+    <div class="slides" id="slides">
+      <div class="slide">
+        <img src="home-p1.jpg" alt="Driving Training" loading="eager"/>
+        <div class="slide-overlay">
+          <h1>NAVEEN MOTOR<br><span>DRIVING SCHOOL</span></h1>
+          <p>Safe Roads Begin with Skilled Drivers</p>
+          <a href="#" onclick="showPage('contact')" class="hero-btn">Contact Us</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="home-p2.jpg" alt="Professional Driving" loading="lazy"/>
+        <div class="slide-overlay">
+          <h1>Learn to Drive<br><span>With Confidence</span></h1>
+          <p>Experienced instructors, beginner-friendly methods</p>
+          <a href="#" onclick="showPage('contact')" class="hero-btn">Contact Us</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="home-p3.jpg" alt="Driving Lesson" loading="lazy"/>
+        <div class="slide-overlay">
+          <h1>Professional<br><span>Driving Training</span></h1>
+          <p>Quality education for two-wheelers and four-wheelers</p>
+          <a href="#" onclick="showPage('contact')" class="hero-btn">Contact Us</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="home-p4.png" alt="Safe Driving" loading="lazy"/>
+        <div class="slide-overlay">
+          <h1>Your Journey to<br><span>Safe Driving</span></h1>
+          <p>Licence assistance made simple and stress-free</p>
+          <a href="#" onclick="showPage('contact')" class="hero-btn">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <button class="slider-arrow prev" onclick="changeSlide(-1)">&#8249;</button>
+    <button class="slider-arrow next" onclick="changeSlide(1)">&#8250;</button>
+    <div class="slider-dots" id="sliderDots"></div>
+  </div>
+
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="stat-item"><span class="stat-num">20+</span><div class="stat-label">Years of Experience</div></div>
+    <div class="stat-item"><span class="stat-num">3</span><div class="stat-label">Expert Instructors</div></div>
+    <div class="stat-item"><span class="stat-num">4</span><div class="stat-label">Course Options</div></div>
+    <div class="stat-item"><span class="stat-num">2W &amp; 4W</span><div class="stat-label">Training Available</div></div>
+  </div>
+
+  <!-- LOCATION -->
+  <section class="section-alt">
+    <div class="location-wrap">
+      <div class="location-info">
+        <h3>📍 Find Us in Belgaum</h3>
+        <p>Conveniently located in the heart of Belagavi, Karnataka, our school is easily accessible for learners across the city.</p>
+        <div class="location-detail">
+          <span class="icon">🏢</span>
+          <div><strong>Office Address</strong><br>Sidashila Apartments, Mahantesh Nagar, Belgaum</div>
+        </div>
+        <div class="location-detail">
+          <span class="icon">🕐</span>
+          <div><strong>Office Timings</strong><br>6:00 AM – 6:00 PM (Mon–Sun)</div>
+        </div>
+        <div class="location-detail">
+          <span class="icon">📞</span>
+          <div><strong>Phone</strong><br><a href="tel:7204416546" style="color:var(--blue);font-weight:600;">7204416546</a></div>
+        </div>
+        <a href="https://goo.gl/maps/JQBAqTv8M8wHYEtH9" target="_blank" class="btn btn-primary" style="margin-top:16px;display:inline-block;">Get Directions ↗</a>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=Sidashila+Apartments+Mahantesh+Nagar+Belgaum&output=embed&z=15" allowfullscreen loading="lazy" title="Naveen Driving School Location"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRODUCTION -->
+  <section>
+    <div class="intro-wrap">
+      <div class="intro-media">
+        <!-- CHANGED: home-p1.jpg removed; only the intro video shown -->
+        <div class="intro-video-embed" id="introVideoWrap" onclick="playIntroVideo()">
+          <div class="video-thumb-inner" id="introThumbInner">
+            <img src="home-p3.jpg" alt="Introduction Video Thumbnail"/>
+            <div class="intro-play-btn">▶</div>
+          </div>
+          <div class="intro-video-label">▶ Watch Our Introduction Video</div>
+        </div>
+        <div class="intro-iframe-wrap" id="introFrame">
+          <iframe src="" id="introIframe" allow="autoplay; encrypted-media" allowfullscreen title="School Introduction Video"></iframe>
+        </div>
+      </div>
+      <div class="intro-text">
+        <h2>About <span>Naveen Motor Driving School</span></h2>
+        <p>Naveen Motor Driving School is a trusted and professional driving institute in Belagavi, Karnataka, offering practical training for both two-wheelers and four-wheelers. With experienced instructors and beginner-friendly teaching methods, the school helps students develop safe, confident, and responsible driving skills while understanding traffic rules and road safety.</p>
+        <p>The institute also provides assistance with learner's and permanent driving licence procedures, making the process simple and stress-free. Known for its supportive and professional environment, Naveen Motor Driving School is committed to delivering quality driving education to the community.</p>
+        <div class="trust-badges">
+          <span class="badge">✔ Experienced Instructors</span>
+          <span class="badge">✔ Licence Assistance</span>
+          <span class="badge">✔ Beginner Friendly</span>
+          <span class="badge">✔ 2W &amp; 4W Training</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES PREVIEW -->
+  <section class="section-navy" style="--text:var(--text);">
+    <div class="section-title">
+      <h2 style="color:#e8f0f8;">Our Courses</h2>
+      <p style="color:rgba(200,220,240,0.75);">Choose from flexible training programs designed for all skill levels</p>
+      <div class="line" style="background:#4d9cf5;"></div>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <span class="tag">12 Days</span>
+        <h3>Advance Course</h3>
+        <p>⏰ Any time: 06:00 AM – 06:00 PM</p>
+      </div>
+      <div class="card">
+        <span class="tag">15 Days</span>
+        <h3>Learner's Course</h3>
+        <p>⏰ Any time: 06:00 AM – 06:00 PM</p>
+      </div>
+      <div class="card">
+        <span class="tag">18 Days</span>
+        <h3>Extended Course</h3>
+        <p>⏰ Any time: 06:00 AM – 06:00 PM</p>
+      </div>
+      <div class="card">
+        <span class="tag">24 Days</span>
+        <h3>Detailed Course</h3>
+        <p>⏰ Any time: 06:00 AM – 06:00 PM</p>
+      </div>
+    </div>
+    <div class="section-cta">
+      <a href="#" onclick="showPage('courses')" class="btn btn-accent btn-lg">View All Courses &amp; Pricing →</a>
+    </div>
+  </section>
+
+  <!-- INSTRUCTORS PREVIEW -->
+  <section class="section-alt">
+    <div class="section-title">
+      <h2>Meet Our Instructors</h2>
+      <p>Qualified, experienced, and dedicated to your success</p>
+      <div class="line"></div>
+    </div>
+    <div class="instructors-grid">
+      <div class="instructor-card">
+        <div class="instructor-img-wrap">
+          <img src="i1.png" alt="Naveen H" loading="lazy"/>
+        </div>
+        <div class="instructor-info">
+          <h3>Naveen H</h3>
+          <span class="exp-badge">20 Years Experience</span>
+          <p style="font-size:0.78rem;margin-top:4px;">Head Instructor &amp; Founder</p>
+        </div>
+      </div>
+      <div class="instructor-card">
+        <div class="instructor-img-wrap">
+          <img src="i2.png" alt="Snehal K" loading="lazy"/>
+        </div>
+        <div class="instructor-info">
+          <h3>Snehal K</h3>
+          <span class="exp-badge">10 Years Experience</span>
+          <p style="font-size:0.78rem;margin-top:4px;">Senior Driving Instructor</p>
+        </div>
+      </div>
+      <div class="instructor-card">
+        <div class="instructor-img-wrap">
+          <img src="i3.png" alt="Shashidar J" loading="lazy"/>
+        </div>
+        <div class="instructor-info">
+          <h3>Shashidar J</h3>
+          <span class="exp-badge">15 Years Experience</span>
+          <p style="font-size:0.78rem;margin-top:4px;">Driving Instructor</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-cta">
+      <a href="#" onclick="showPage('about')" class="btn btn-outline btn-lg">Meet Our Team in Detail →</a>
+    </div>
+  </section>
+
+  <!-- CONTACT PREVIEW -->
+  <section>
+    <div class="section-title">
+      <h2>Get In Touch</h2>
+      <p>We're here to help you start your driving journey</p>
+      <div class="line"></div>
+    </div>
+    <div class="contact-preview">
+      <div class="contact-info-card">
+        <h3>📞 Contact Information</h3>
+        <div class="contact-row"><span class="ci">📱</span><span>7204416546</span></div>
+        <div class="contact-row"><span class="ci">✉️</span><span>naveenmotordrivingschool@gmail.com</span></div>
+        <div class="contact-row"><span class="ci">📍</span><span>Sidashila Apartments, Mahantesh Nagar, Belgaum</span></div>
+        <div class="contact-row"><span class="ci">🕐</span><span>6:00 AM – 6:00 PM</span></div>
+        <div class="contact-actions">
+          <a href="https://wa.me/917996541787" target="_blank" class="btn-wa">💬 WhatsApp</a>
+          <a href="#" onclick="showPage('contact')" class="btn-white">Contact Page</a>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=Sidashila+Apartments+Mahantesh+Nagar+Belgaum&output=embed&z=15" allowfullscreen loading="lazy" title="Office Location"></iframe>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end home -->
+
+<!-- COURSES & SERVICES PAGE -->
+<div class="page" id="page-courses">
+
+  <section style="padding-top:50px;">
+    <div class="section-title">
+      <h2>Our Training Courses</h2>
+      <p>Comprehensive driving education tailored for every learner</p>
+      <div class="line"></div>
+    </div>
+    <div class="cards-grid">
+
+      <div class="course-card">
+        <h3>Advance Course</h3>
+        <div class="course-price">₹5,500 <span>/ course</span></div>
+        <div class="course-labels">
+          <span class="label label-blue">12 Days</span>
+          <span class="label label-green">Beginner Friendly</span>
+        </div>
+        <p style="font-size:0.85rem;color:var(--text-light);">⏰ Any time: 06:00 AM – 06:00 PM</p>
+        <button class="toggle-desc" onclick="toggleDesc(this)">▼ Show Details</button>
+        <div class="course-desc">Admission to the course will remain valid for a period of 2 months from the date of joining. During this period, students can attend training sessions and complete their driving practice according to the course schedule.</div>
+        <div style="margin-top:14px;"><a href="#" onclick="showModal()" class="btn btn-primary">Enquire Now</a></div>
+      </div>
+
+      <div class="course-card">
+        <h3>Learner's Course</h3>
+        <div class="course-price">₹7,500 <span>/ course</span></div>
+        <div class="course-labels">
+          <span class="label label-blue">15 Days</span>
+          <span class="label label-orange">Licence Assistance</span>
+        </div>
+        <p style="font-size:0.85rem;color:var(--text-light);">⏰ Any time: 06:00 AM – 06:00 PM</p>
+        <button class="toggle-desc" onclick="toggleDesc(this)">▼ Show Details</button>
+        <div class="course-desc">Students can attend training sessions at any time within the course training schedule. Training will be provided for a minimum of 30 minutes per day to ensure proper practical learning and driving experience.</div>
+        <div style="margin-top:14px;"><a href="#" onclick="showModal()" class="btn btn-primary">Enquire Now</a></div>
+      </div>
+
+      <div class="course-card">
+        <h3>Extended Course</h3>
+        <div class="course-price">₹8,500 <span>/ course</span></div>
+        <div class="course-labels">
+          <span class="label label-blue">18 Days</span>
+          <span class="label label-green">Flexible Timings</span>
+        </div>
+        <p style="font-size:0.85rem;color:var(--text-light);">⏰ Any time: 06:00 AM – 06:00 PM</p>
+        <button class="toggle-desc" onclick="toggleDesc(this)">▼ Show Details</button>
+        <div class="course-desc">Students can attend training sessions at any time within the course training schedule. Training will be provided for a minimum of 30 minutes per day to ensure proper practical learning and driving experience.</div>
+        <div style="margin-top:14px;"><a href="#" onclick="showModal()" class="btn btn-primary">Enquire Now</a></div>
+      </div>
+
+      <div class="course-card">
+        <h3>Detailed Course</h3>
+        <div class="course-price">₹10,000 <span>/ course</span></div>
+        <div class="course-labels">
+          <span class="label label-blue">24 Days</span>
+          <span class="label label-orange">Theory + Practical</span>
+        </div>
+        <p style="font-size:0.85rem;color:var(--text-light);">⏰ Any time: 06:00 AM – 06:00 PM</p>
+        <button class="toggle-desc" onclick="toggleDesc(this)">▼ Show Details</button>
+        <div class="course-desc">Also includes detailed theory &amp; practical sessions for a comprehensive understanding of road rules, vehicle handling, traffic signs, and safe driving techniques.</div>
+        <div style="margin-top:14px;"><a href="#" onclick="showModal()" class="btn btn-primary">Enquire Now</a></div>
+      </div>
+
+    </div>
+    <div class="section-cta">
+      <a href="#" onclick="showModal()" class="btn btn-accent btn-lg">Enquire About Any Course →</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section-alt">
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Beyond driving training — we support you every step of the way</p>
+      <div class="line"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-block">
+        <h3>🛡️ Our Core Services</h3>
+        <div class="service-item">Complete guidance for Driving Licence procedures</div>
+        <div class="service-item">Learner Licence assistance and support</div>
+        <div class="service-item">Driving Licence correction and update services (Name change, address change, and other modifications)</div>
+        <div class="service-item">Insurance and RTO-related services</div>
+        <div class="service-item">Door pickup facility for driving training</div>
+        <div class="service-item">Used car inspection and vehicle evaluation</div>
+        <div class="service-item">Second-hand vehicle buying and selling assistance</div>
+      </div>
+      <div class="service-block">
+        <h3>🤝 Additional Support</h3>
+        <div class="service-item">Friendly guidance throughout the registration process</div>
+        <div class="service-item">Assistance for beginners and first-time learners</div>
+        <div class="service-item">Professional support for safe and legal driving documentation</div>
+        <div style="margin-top:20px;padding:18px;background:var(--bg-gray);border-radius:10px;">
+          <p style="font-size:0.9rem;color:var(--text-light);"><strong style="color:var(--text);">📞 Need Help?</strong><br>Our team is available 6:00 AM – 6:00 PM to assist you with any questions about courses, licences, or services.</p>
+          <a href="tel:7204416546" class="btn btn-primary" style="margin-top:12px;display:inline-block;">Call Us Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY — FIXED -->
+  <section>
+    <div class="section-title">
+      <h2>Training Gallery</h2>
+      <p>A glimpse into our training environment and sessions</p>
+      <div class="line"></div>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item" onclick="openLightbox('gallery/gl-p1.jpeg')"><img src="gallery/gl-p1.jpeg" alt="Training Photo 1" loading="lazy"/></div>
+      <div class="gallery-item" onclick="openLightbox('gallery/gl-p2.jpeg')"><img src="gallery/gl-p2.jpeg" alt="Training Photo 2" loading="lazy"/></div>
+      <div class="gallery-item" onclick="openLightbox('gallery/gl-p3.jpeg')"><img src="gallery/gl-p3.jpeg" alt="Training Photo 3" loading="lazy"/></div>
+      <div class="gallery-item">
+        <div class="video-tile"><iframe src="https://www.youtube.com/embed/9xwdUtrDRqQ" loading="lazy" allow="encrypted-media" allowfullscreen title="Training Video 1"></iframe></div>
+      </div>
+      <div class="gallery-item gallery-extra" onclick="openLightbox('gallery/gl-p4.jpeg')"><img src="gallery/gl-p4.jpeg" alt="Training Photo 4" loading="lazy"/></div>
+      <div class="gallery-item gallery-extra" onclick="openLightbox('gallery/gl-p5.jpeg')"><img src="gallery/gl-p5.jpeg" alt="Training Photo 5" loading="lazy"/></div>
+      <div class="gallery-item gallery-extra" onclick="openLightbox('gallery/gl-p6.jpeg')"><img src="gallery/gl-p6.jpeg" alt="Training Photo 6" loading="lazy"/></div>
+      <div class="gallery-item gallery-extra">
+        <div class="video-tile short"><iframe src="https://www.youtube.com/embed/clrUGWAyQEQ" loading="lazy" allow="encrypted-media" allowfullscreen title="Training Video 2"></iframe></div>
+      </div>
+      <div class="gallery-item gallery-extra" onclick="openLightbox('gallery/gl-p7.jpeg')"><img src="gallery/gl-p7.jpeg" alt="Training Photo 7" loading="lazy"/></div>
+      <div class="gallery-item gallery-extra" onclick="openLightbox('gallery/gl-p8.jpeg')"><img src="gallery/gl-p8.jpeg" alt="Training Photo 8" loading="lazy"/></div>
+      <div class="gallery-item gallery-extra" onclick="openLightbox('gallery/gl-p9.jpeg')"><img src="gallery/gl-p9.jpeg" alt="Training Photo 9" loading="lazy"/></div>
+      <div class="gallery-item gallery-extra">
+        <div class="video-tile"><iframe src="https://www.youtube.com/embed/2LhaMfDkztE" loading="lazy" allow="encrypted-media" allowfullscreen title="Training Video 3"></iframe></div>
+      </div>
+      <div class="gallery-item gallery-extra" onclick="openLightbox('gallery/gl-p10.jpeg')"><img src="gallery/gl-p10.jpeg" alt="Training Photo 10" loading="lazy"/></div>
+      <div class="gallery-item gallery-extra" onclick="openLightbox('gallery/gl-p11.jpeg')"><img src="gallery/gl-p11.jpeg" alt="Training Photo 11" loading="lazy"/></div>
+      <div class="gallery-item gallery-extra" onclick="openLightbox('gallery/gl-p12.jpeg')"><img src="gallery/gl-p12.jpeg" alt="Training Photo 12" loading="lazy"/></div>
+      <div class="gallery-item gallery-extra">
+        <div class="video-tile short"><iframe src="https://www.youtube.com/embed/Qd_Rcj066HQ" loading="lazy" allow="encrypted-media" allowfullscreen title="Training Video 4"></iframe></div>
+      </div>
+      <div class="gallery-item gallery-extra" onclick="openLightbox('gallery/gl-p13.jpeg')"><img src="gallery/gl-p13.jpeg" alt="Training Photo 13" loading="lazy"/></div>
+      <div class="gallery-item gallery-extra" onclick="openLightbox('gallery/gl-p14.jpeg')"><img src="gallery/gl-p14.jpeg" alt="Training Photo 14" loading="lazy"/></div>
+      <div class="gallery-item gallery-extra" onclick="openLightbox('gallery/gl-p15.jpeg')"><img src="gallery/gl-p15.jpeg" alt="Training Photo 15" loading="lazy"/></div>
+      <div class="gallery-item gallery-extra" onclick="openLightbox('gallery/gl-p16.jpeg')"><img src="gallery/gl-p16.jpeg" alt="Training Photo 16" loading="lazy"/></div>
+      <div class="gallery-item gallery-extra" onclick="openLightbox('gallery/gl-p17.jpeg')"><img src="gallery/gl-p17.jpeg" alt="Training Photo 17" loading="lazy"/></div>
+    </div>
+    <div class="gallery-toggle-wrap">
+      <button class="btn btn-outline btn-lg" id="galleryToggleBtn" onclick="toggleGallery()">Show More Photos ▼</button>
+    </div>
+  </section>
+
+</div><!-- end courses page -->
+
+<!-- ABOUT US PAGE -->
+<div class="page" id="page-about">
+
+  <section style="padding-top:50px;">
+    <div class="section-title">
+      <h2>Our Office</h2>
+      <p>Conveniently located to serve learners across Belgaum</p>
+      <div class="line"></div>
+    </div>
+    <div class="location-wrap">
+      <div class="location-info">
+        <h3>📍 Office Location</h3>
+        <div class="location-detail">
+          <span class="icon">🏢</span>
+          <div><strong>Address</strong><br>Sidashila Apartments, Mahantesh Nagar, Belgaum</div>
+        </div>
+        <p style="color:var(--text-light);margin-top:14px;font-size:0.92rem;">Our office is located in Belgaum (Belagavi), Karnataka, providing a friendly and professional environment for driving learners. Our office helps students with course guidance, driving training information, licence assistance, and registration procedures.</p>
+        <a href="https://goo.gl/maps/JQBAqTv8M8wHYEtH9" target="_blank" class="btn btn-primary" style="margin-top:16px;display:inline-block;">Open in Google Maps ↗</a>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=Sidashila+Apartments+Mahantesh+Nagar+Belgaum&output=embed&z=15" allowfullscreen loading="lazy" title="Office Map"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="section-title">
+      <h2>Our Expert Instructors</h2>
+      <p>Qualified professionals dedicated to your learning journey</p>
+      <div class="line"></div>
+    </div>
+    <div class="instructors-grid">
+      <div class="instructor-card">
+        <div class="instructor-img-wrap">
+          <img src="i1.png" alt="Naveen H" loading="lazy"/>
+        </div>
+        <div class="instructor-info">
+          <h3>Naveen H</h3>
+          <span class="exp-badge">20 Years Experience</span>
+          <p style="font-size:0.78rem;color:var(--text-light);margin-top:6px;">Head Instructor &amp; Founder</p>
+          <div class="lang-badges">
+            <span class="lang-badge">Kannada</span>
+            <span class="lang-badge">Hindi</span>
+            <span class="lang-badge">Marathi</span>
+            <span class="lang-badge">English</span>
+          </div>
+        </div>
+      </div>
+      <div class="instructor-card">
+        <div class="instructor-img-wrap">
+          <img src="i2.png" alt="Snehal K" loading="lazy"/>
+        </div>
+        <div class="instructor-info">
+          <h3>Snehal K</h3>
+          <span class="exp-badge">10 Years Experience</span>
+          <p style="font-size:0.78rem;color:var(--text-light);margin-top:6px;">Senior Driving Instructor</p>
+          <div class="lang-badges">
+            <span class="lang-badge">Kannada</span>
+            <span class="lang-badge">Hindi</span>
+            <span class="lang-badge">Marathi</span>
+            <span class="lang-badge">English</span>
+          </div>
+        </div>
+      </div>
+      <div class="instructor-card">
+        <div class="instructor-img-wrap">
+          <img src="i3.png" alt="Shashidar J" loading="lazy"/>
+        </div>
+        <div class="instructor-info">
+          <h3>Shashidar J</h3>
+          <span class="exp-badge">15 Years Experience</span>
+          <p style="font-size:0.78rem;color:var(--text-light);margin-top:6px;">Driving Instructor</p>
+          <div class="lang-badges">
+            <span class="lang-badge">Kannada</span>
+            <span class="lang-badge">Hindi</span>
+            <span class="lang-badge">Marathi</span>
+            <span class="lang-badge">English</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-cta">
+      <a href="#" onclick="showPage('contact')" class="btn btn-outline btn-lg">Contact Our Team →</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>Our Goals &amp; Values</h2>
+      <p>Driven by a commitment to safe and quality driving education</p>
+      <div class="line"></div>
+    </div>
+    <div class="goals-grid">
+      <div class="goal-card">
+        <h3>🎯 Our Mission</h3>
+        <p>Our mission is to provide safe, professional, and confidence-building driving education for every learner. We are committed to helping students develop responsible driving habits through practical training, road safety awareness, and friendly guidance from experienced instructors.</p>
+      </div>
+      <div class="goal-card">
+        <h3>🌟 Our Vision</h3>
+        <p>Our vision is to become one of the most trusted and respected driving schools in Belgaum by creating skilled, confident, and responsible drivers. We aim to build a safer driving culture in our community through quality training, modern teaching methods, and strong focus on road safety.</p>
+      </div>
+      <div class="goal-card" style="grid-column:1/-1;">
+        <h3>🏁 Our School Goals</h3>
+        <ul style="display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;margin-top:8px;">
+          <li>To provide quality driving training for both two-wheelers and four-wheelers</li>
+          <li>To help students gain confidence in real road conditions</li>
+          <li>To promote safe and responsible driving habits</li>
+          <li>To guide learners through driving licence procedures smoothly</li>
+          <li>To create a friendly and supportive learning environment for all age groups</li>
+          <li>To improve road safety awareness within the community</li>
+          <li>To offer practical and theoretical training with patience and professionalism</li>
+          <li>To continuously maintain high standards in driving education and customer service</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="section-title">
+      <h2>Safe Driving Awareness</h2>
+      <p>Essential tips for every responsible driver on the road</p>
+      <div class="line"></div>
+    </div>
+    <div class="safety-grid">
+      <div class="safety-item"><span class="num">01</span> Always wear a helmet and seatbelt while driving</div>
+      <div class="safety-item"><span class="num">02</span> Follow all traffic rules and road signs carefully</div>
+      <div class="safety-item"><span class="num">03</span> Avoid using mobile phones while driving</div>
+      <div class="safety-item"><span class="num">04</span> Maintain proper speed limits for safety</div>
+      <div class="safety-item"><span class="num">05</span> Keep a safe distance from other vehicles</div>
+      <div class="safety-item"><span class="num">06</span> Use indicators while turning or changing lanes</div>
+      <div class="safety-item"><span class="num">07</span> Never drink and drive</div>
+      <div class="safety-item"><span class="num">08</span> Stay focused and alert on the road</div>
+      <div class="safety-item"><span class="num">09</span> Regularly check vehicle condition and brakes</div>
+      <div class="safety-item"><span class="num">10</span> Respect pedestrians and other road users</div>
+      <div class="safety-item"><span class="num">11</span> Drive patiently and avoid rash driving</div>
+      <div class="safety-item"><span class="num">12</span> Practice defensive driving in busy traffic areas</div>
+      <div class="safety-item"><span class="num">13</span> Always carry valid driving documents</div>
+      <div class="safety-item"><span class="num">14</span> Be extra careful during rain and night driving</div>
+      <div class="safety-item"><span class="num">15</span> Learn responsible driving habits for a safer future</div>
+    </div>
+  </section>
+
+</div><!-- end about page -->
+
+<!-- CONTACT PAGE -->
+<div class="page" id="page-contact">
+  <section style="padding-top:50px;">
+    <div class="section-title">
+      <h2>Contact Us</h2>
+      <p>We're here to answer your questions and guide you</p>
+      <div class="line"></div>
+    </div>
+    <div class="contact-page-wrap">
+      <div>
+        <div class="contact-person">
+          <img src="i1.png" alt="Naveen Harikeri"/>
+          <h3>Naveen Harikeri</h3>
+          <p style="color:var(--text-light);font-size:0.88rem;">Head Instructor &amp; Owner</p>
+        </div>
+        <div class="contact-details">
+          <div class="cd-row"><span class="cd-icon">📞</span><div><strong>Phone</strong><br><a href="tel:7204416546">7204416546</a></div></div>
+          <div class="cd-row"><span class="cd-icon">💬</span><div><strong>WhatsApp</strong><br><a href="https://wa.me/917996541787" target="_blank">7996541787</a></div></div>
+          <div class="cd-row"><span class="cd-icon">✉️</span><div><strong>Email</strong><br><a href="mailto:naveenmotordrivingschool@gmail.com">naveenmotordrivingschool@gmail.com</a></div></div>
+          <div class="cd-row"><span class="cd-icon">📍</span><div><strong>Address</strong><br>Sidashila Apartments, Mahantesh Nagar, Belgaum</div></div>
+          <div class="cd-row"><span class="cd-icon">🕐</span><div><strong>Office Timings</strong><br>06:00 AM – 06:00 PM</div></div>
+          <!-- CHANGED: real social icons -->
+          <div class="social-links">
+            <a href="https://www.instagram.com/naveendrivingschool?igsh=MXB6ZXVtbGxyOHg5MA==" target="_blank" class="social-link insta">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              Instagram
+            </a>
+            <a href="https://www.facebook.com/share/1EXewR5ntf/" target="_blank" class="social-link fb">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </a>
+            <a href="https://youtube.com/@naveendriving-s2l?si=C4zTU0Aus_Nt_iE0" target="_blank" class="social-link yt">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+              YouTube
+            </a>
+          </div>
+          <div style="display:flex;gap:12px;margin-top:16px;">
+            <a href="tel:7204416546" class="btn btn-primary" style="flex:1;text-align:center;">📞 Call Now</a>
+            <a href="https://wa.me/917996541787" target="_blank" class="btn-wa" style="flex:1;justify-content:center;">💬 WhatsApp</a>
+          </div>
+        </div>
+        <div class="map-frame" style="margin-top:20px;">
+          <iframe src="https://maps.google.com/maps?q=Sidashila+Apartments+Mahantesh+Nagar+Belgaum&output=embed&z=15" allowfullscreen loading="lazy" title="Contact Map"></iframe>
+        </div>
+      </div>
+      <div class="contact-form-area">
+        <h3>Send Us a Message</h3>
+        <!-- CHANGED: sends message via WhatsApp to 72004416546 -->
+        <div id="contactForm">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="cf-name" placeholder="Your name"/>
+            <div class="form-error" id="cf-name-err">Please enter your name.</div>
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="cf-phone" placeholder="Your phone number"/>
+            <div class="form-error" id="cf-phone-err">Please enter a valid phone number.</div>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea id="cf-msg" placeholder="How can we help you?"></textarea>
+          </div>
+          <button type="button" class="btn-submit" onclick="submitContactForm()">Send Message ✉️</button>
+          <div class="form-success" id="cf-success">✅ Message sent! We will contact you soon.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- end contact page -->
+
+<!-- ENQUIRE MODAL -->
+<div class="modal-overlay" id="enquireModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:6px;font-family:'Fraunces',serif;">Enquire Now</h2>
+    <p style="color:var(--text-light);font-size:0.88rem;margin-bottom:24px;">Fill in your details and we'll get back to you shortly.</p>
+    <div id="enquireForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name <span style="color:red">*</span></label>
+          <input type="text" id="eq-name" placeholder="Full name"/>
+          <div class="form-error" id="eq-name-err">Full name is required.</div>
+        </div>
+        <div class="form-group">
+          <label>Age <span style="color:red">*</span></label>
+          <input type="number" id="eq-age" placeholder="Your age" min="16" max="80"/>
+          <div class="form-error" id="eq-age-err">Please enter your age.</div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Gender <span style="color:red">*</span></label>
+          <select id="eq-gender">
+            <option value="">Select Gender</option>
+            <option>Male</option><option>Female</option><option>Other</option>
+          </select>
+          <div class="form-error" id="eq-gender-err">Please select your gender.</div>
+        </div>
+        <div class="form-group">
+          <label>Phone Number <span style="color:red">*</span></label>
+          <input type="tel" id="eq-phone" placeholder="Phone number"/>
+          <div class="form-error" id="eq-phone-err">Please enter your phone number.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email ID <span style="color:var(--text-light);font-weight:400;">(optional)</span></label>
+        <input type="email" id="eq-email" placeholder="Email address"/>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Select Course/Service <span style="color:var(--text-light);font-weight:400;">(optional)</span></label>
+          <select id="eq-course">
+            <option value="">Select a course</option>
+            <option>Advance Course (12 Days – ₹5,500)</option>
+            <option>Learner's Course (15 Days – ₹7,500)</option>
+            <option>Extended Course (18 Days – ₹8,500)</option>
+            <option>Detailed Course (24 Days – ₹10,000)</option>
+            <option>Licence Assistance</option>
+            <option>RTO / Insurance Services</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Preferred Timing <span style="color:var(--text-light);font-weight:400;">(optional)</span></label>
+          <select id="eq-timing">
+            <option value="">Select timing</option>
+            <option>06:00 AM – 09:00 AM</option>
+            <option>09:00 AM – 12:00 PM</option>
+            <option>12:00 PM – 03:00 PM</option>
+            <option>03:00 PM – 06:00 PM</option>
+          </select>
+        </div>
+      </div>
+      <button type="button" class="btn-submit" id="enquireSubmitBtn" onclick="submitEnquire()" style="margin-top:8px;">Submit Enquiry 🚗</button>
+      <div class="form-success" id="eq-success">✅ Enquiry submitted! We will contact you soon.</div>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img id="lightboxImg" src="" alt="Gallery Image"/>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Naveen Motor Driving School"/>
+      <p>Professional driving education in Belgaum, Karnataka. Building safe, confident drivers with experienced instructors and quality training.</p>
+      <!-- CHANGED: real social icons in footer -->
+      <div class="footer-social" style="margin-top:14px;">
+        <a href="https://www.instagram.com/naveendrivingschool?igsh=MXB6ZXVtbGxyOHg5MA==" target="_blank" title="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/share/1EXewR5ntf/" target="_blank" title="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://youtube.com/@naveendriving-s2l?si=C4zTU0Aus_Nt_iE0" target="_blank" title="YouTube">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#" onclick="showPage('home')">Home</a></li>
+        <li><a href="#" onclick="showPage('courses')">Courses &amp; Services</a></li>
+        <li><a href="#" onclick="showPage('about')">About Us</a></li>
+        <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        <li><a href="#" onclick="showModal()">Enquire Now</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Courses</h4>
+      <ul>
+        <li><a href="#" onclick="showPage('courses')">Advance Course – 12 Days</a></li>
+        <li><a href="#" onclick="showPage('courses')">Learner's Course – 15 Days</a></li>
+        <li><a href="#" onclick="showPage('courses')">Extended Course – 18 Days</a></li>
+        <li><a href="#" onclick="showPage('courses')">Detailed Course – 24 Days</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:7204416546">📞 7204416546</a></li>
+        <li><a href="https://wa.me/917996541787" target="_blank">💬 WhatsApp: 7996541787</a></li>
+        <li><a href="mailto:naveenmotordrivingschool@gmail.com">✉️ Email Us</a></li>
+        <li><a href="https://goo.gl/maps/JQBAqTv8M8wHYEtH9" target="_blank">📍 Mahantesh Nagar, Belgaum</a></li>
+        <li>🕐 6:00 AM – 6:00 PM</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Naveen Motor Driving School, Belgaum, Karnataka. All rights reserved.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/917996541787" target="_blank" class="float-wa" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+<script src="script.js"></script>
+</body>
+</html>
+<!-- Developed by Karthik H -->
